@@ -20,7 +20,6 @@ class GoogleTranslatorRepository {
       required Duration cacheDuration,
       required String text}) async {
     try {
-      if (target == 'en') return text;
       Response response = await _dio.post("?key=$apiKey",
           data: {
             "q": text,
